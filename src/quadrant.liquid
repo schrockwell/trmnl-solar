@@ -1,0 +1,39 @@
+{% assign d = solar.solardata %}
+
+<div class="layout layout--col layout--stretch">
+  <div class="grid grid--cols-2 gap--small w--full h--full">
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--large" data-fit-value="true">{{ d.solarflux | strip }}</span>
+        <span class="label">SFI</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--large" data-fit-value="true">{{ d.sunspots | strip }}</span>
+        <span class="label">Sunspots</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--large" data-fit-value="true">{{ d.aindex | strip }}</span>
+        <span class="label">A-Index</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value value--large" data-fit-value="true">{{ d.kindex | strip }}</span>
+        <span class="label">K-Index</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="title_bar">
+  <span class="title">Solar Weather</span>
+  <span class="instance">{{ d.updated | strip }}</span>
+</div>

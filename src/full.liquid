@@ -1,0 +1,48 @@
+{% assign d = solar.solardata %}
+
+<div class="layout layout--row layout--stretch gap--large">
+  <div class="grid grid--cols-2 gap--medium" style="flex: 5 1 0;">
+    <div class="flex flex--col outline" style="overflow: hidden;">
+      <div class="flex flex--col flex--center-x flex--center-y" style="flex: 1 1 0;">
+        <span class="value value--xxlarge">{{ d.solarflux | strip }}</span>
+      </div>
+      <div class="bg--gray-70 w--full flex flex--center-x py--1">
+        <span class="label label--large text-stroke">SFI</span>
+      </div>
+    </div>
+    <div class="flex flex--col outline" style="overflow: hidden;">
+      <div class="flex flex--col flex--center-x flex--center-y" style="flex: 1 1 0;">
+        <span class="value value--xxlarge">{{ d.sunspots | strip }}</span>
+      </div>
+      <div class="bg--gray-70 w--full flex flex--center-x py--1">
+        <span class="label label--large text-stroke">Sunspots</span>
+      </div>
+    </div>
+    <div class="flex flex--col outline" style="overflow: hidden;">
+      <div class="flex flex--col flex--center-x flex--center-y" style="flex: 1 1 0;">
+        <span class="value value--xxlarge">{{ d.aindex | strip }}</span>
+      </div>
+      <div class="bg--gray-70 w--full flex flex--center-x py--1">
+        <span class="label label--large text-stroke">A-Index</span>
+      </div>
+    </div>
+    <div class="flex flex--col outline" style="overflow: hidden;">
+      <div class="flex flex--col flex--center-x flex--center-y" style="flex: 1 1 0;">
+        <span class="value value--xxlarge">{{ d.kindex | strip }}</span>
+      </div>
+      <div class="bg--gray-70 w--full flex flex--center-x py--1">
+        <span class="label label--large text-stroke">K-Index</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex--center-x flex--center-y" style="flex: 4 1 0;">
+    <img class="image-dither rounded" src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_HMIIF.jpg"
+      style="max-width: 100%; max-height: 100%; object-fit: contain;" alt="Latest SDO image of the sun" />
+  </div>
+</div>
+
+<div class="title_bar">
+  <span class="title">Solar Weather</span>
+  <span class="instance">{{ d.updated | strip }}</span>
+</div>

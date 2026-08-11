@@ -1,0 +1,46 @@
+{% assign d = solar.solardata %}
+
+<div class="layout layout--col layout--stretch gap--medium">
+  <div class="grid grid--cols-4 gap--medium w--full" style="flex: 0 0 auto;">
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value" data-fit-value="true">{{ d.solarflux | strip }}</span>
+        <span class="label lg:label--large">SFI</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value" data-fit-value="true">{{ d.sunspots | strip }}</span>
+        <span class="label lg:label--large">Sunspots</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value" data-fit-value="true">{{ d.aindex | strip }}</span>
+        <span class="label lg:label--large">A-Index</span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="value" data-fit-value="true">{{ d.kindex | strip }}</span>
+        <span class="label lg:label--large">K-Index</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="w--full" style="flex: 1 1 0; min-height: 0;">
+    <div class="flex flex--center-x flex--center-y w--full h--full">
+      <img class="image-dither rounded" style="max-width: 100%; max-height: 100%;"
+        src="https://sdo.gsfc.nasa.gov/assets/img/latest/latest_512_HMIIF.jpg" alt="Latest SDO image of the sun" />
+    </div>
+  </div>
+</div>
+
+<div class="title_bar">
+  <span class="title">Solar Weather</span>
+  <span class="instance">{{ d.updated | strip }}</span>
+</div>
