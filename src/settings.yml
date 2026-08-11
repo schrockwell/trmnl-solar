@@ -37,6 +37,6 @@ custom_fields:
   field_type: author_bio
   description: Solar conditions from hamqsl.com and NASA
   github_url: https://github.com/schrockwell/trmnl-solar
-name: Solar Weather
+name: Ham Radio - Solar Weather
 description: HF propagation & solar conditions
 refresh_interval: 60
